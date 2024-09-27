@@ -1,0 +1,116 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "users": [
+    {
+      "id": "1",
+      "username": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "2",
+      "username": "sampleUser@example.com",
+      "password": "welcome"
+    },
+    {
+      "email": "email@example.com",
+      "password": "welcome",
+      "id": "3"
+    },
+    {
+      "id": "5eff",
+      "email": "email@example.com",
+      "password": "welcome"
+    },
+    {
+      "id": "a2aa",
+      "email": "email@example.com",
+      "password": "welcome"
+    },
+    {
+      "id": "0d51",
+      "email": "email@example.com",
+      "password": "welcome"
+    },
+    {
+      "id": "8556",
+      "email": "email@example.com",
+      "password": "welcome"
+    },
+    {
+      "id": "001f",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "4979",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "5952",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "ddd5",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "76f5",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "61c4",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "9e84",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "a6d2",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    }
+  ],
+  "userDetails": [
+    {
+      "id": "ebc8",
+      "name": "Alex A",
+      "email": "alexmaxwell7@outlook.com",
+      "employeeId": "3333",
+      "mobileNumber": "7030555988",
+      "JobRole": "manager"
+    }
+  ]
+}

@@ -1,38 +1,59 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
-  text-align: center;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 991px) {
+    #dropdown {
+      position: relative !important;
+      transform: translate3d(0px, 0px, 0px) !important;
+    }
+  
+    #arrow img {
+      transform: rotate(180deg);
+    }
+  
+    .space .col-5 {
+      width: 100%;
+      max-width: 350px;
+      z-index: 999;
+    }
+  
+    .space #arrow img {
+      transform: rotate(0deg);
+    }
+  
+    .space #arrow {
+      background-color: #fff;
+      width: 28px;
+      left: -15px;
+      justify-content: center;
+    }
+  
+    .table thead tr th:last-child {
+      background: #fff3da;
+    }
+  
+    .table thead tr th:last-child,
+    .table tbody tr td:last-child {
+      position: sticky;
+      right: 0;
+      display: flex;
+      padding: 19px 10px;
+      align-items: center;
+      width: 61px;
+      justify-content: center;
+    }
+  
+    .table tbody tr td:last-child {
+      background: #ffff;
+    }
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
