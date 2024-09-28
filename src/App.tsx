@@ -5,6 +5,8 @@ import FormDetails from "./components/FormDetails";
 import Home from "./components/Home";
 import ProtectedRoute from "./components/ProtectedRoute";
 import NotFound from "./components/NotFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export interface TableData {
   status: string;
   totalTasks: number;
@@ -35,6 +37,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <ToastContainer />
+
     </div>
   );
 }

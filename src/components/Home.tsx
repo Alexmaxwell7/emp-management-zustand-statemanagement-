@@ -16,7 +16,7 @@ const Home = () => {
     };
 
     useEffect(() => {
-        loadUserList();  // Call the service when component loads
+        loadUserList();
     }, [toggleCount]);
   return (
     <div className='w-full h-full overflow-hidden'>

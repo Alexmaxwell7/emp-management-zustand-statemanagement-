@@ -28,89 +28,87 @@
   },
   "users": [
     {
-      "id": "1",
-      "username": "exampleuser@gmail.com",
-      "password": "welcome"
-    },
-    {
-      "id": "2",
-      "username": "sampleUser@example.com",
-      "password": "welcome"
-    },
-    {
-      "email": "email@example.com",
-      "password": "welcome",
-      "id": "3"
-    },
-    {
-      "id": "5eff",
-      "email": "email@example.com",
-      "password": "welcome"
-    },
-    {
-      "id": "a2aa",
-      "email": "email@example.com",
-      "password": "welcome"
-    },
-    {
-      "id": "0d51",
-      "email": "email@example.com",
-      "password": "welcome"
-    },
-    {
-      "id": "8556",
-      "email": "email@example.com",
-      "password": "welcome"
-    },
-    {
-      "id": "001f",
+      "id": "039f",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "4979",
+      "id": "f8a5",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "5952",
+      "id": "12a1",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "ddd5",
+      "id": "2c36",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "76f5",
+      "id": "2725",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "61c4",
+      "id": "6acc",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "9e84",
+      "id": "3d32",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "a6d2",
+      "id": "c3db",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
     },
     {
-      "id": "68d0",
+      "id": "6b6c",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
+    },
+    {
+      "id": "be1d",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "102c",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "84b0",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
+    },
+    {
+      "id": "d417",
+      "email": "exampleuser@gmail.com",
+      "password": "we"
+    },
+    {
+      "id": "6eab",
+      "email": "exampleuser@gmail.com",
+      "password": "xx"
     }
   ],
   "userDetails": [
     {
-      "id": "ebc8",
+      "id": "76e5",
+      "name": "Alex A",
+      "email": "alexmaxwell7@outlook.com",
+      "employeeId": "3333",
+      "mobileNumber": "7030555988",
+      "JobRole": "manager"
+    },
+    {
+      "id": "acf1",
       "name": "Alex A",
       "email": "alexmaxwell7@outlook.com",
       "employeeId": "3333",
@@ -118,12 +116,12 @@
       "JobRole": "admin"
     },
     {
-      "id": "c4a4",
-      "name": "Vignesh d s",
+      "id": "575e",
+      "name": "CHITRA S",
       "email": "abcde@gmail.com",
-      "employeeId": "6666",
-      "mobileNumber": "7030555998",
-      "JobRole": "admin"
+      "employeeId": "7777",
+      "mobileNumber": "7030555939",
+      "JobRole": "manager"
     }
   ]
 }

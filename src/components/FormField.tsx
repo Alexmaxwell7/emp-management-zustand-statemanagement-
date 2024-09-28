@@ -7,9 +7,7 @@ import { FaIdBadge } from "react-icons/fa";
 import { MdLocalPhone } from "react-icons/md";
 import { Controller, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Joi from "joi";
+import {  toast } from "react-toastify";
 import { joiResolver } from "@hookform/resolvers/joi";
 import { updateUserList } from "../store/Store";
 import {
@@ -17,54 +15,14 @@ import {
   createUser,
   updateUser,
 } from "../services/employeeServices";
-interface FormValues {
-  name: string;
-  email: string;
-  employeeId: string;
-  mobileNumber: string;
-  role: string;
-}
 
-interface FormFieldProps {
-  id?: string;
-  onClose?: (() => void | undefined) | undefined;
-}
+import { validationSchema } from "../utils/validationSchema";
+import {
+  FormValues,
+  FormFieldProps,
+  FormDetails,
+} from "../types/employeeTypes";
 
-interface FormDetails {
-  name: string;
-  email: string;
-  employeeId: string;
-  mobileNumber: string;
-  JobRole: string;
-}
-
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-const validationSchema = Joi.object({
-  name: Joi.string().min(3).max(30).required().messages({
-    "string.empty": "This field cannot be left blank",
-    "string.min": "Name must be at least 3 characters long",
-    "string.max": "Name cannot be longer than 30 characters",
-  }),
-  email: Joi.string().pattern(emailRegex).required().messages({
-    "string.empty": "Email Address is required",
-    "string.pattern.base": "Invalid Email Address",
-  }),
-  employeeId: Joi.string().min(4).required().messages({
-    "string.empty": "This field cannot be left blank",
-    "string.min": "Employee Id must be at least 4 characters long",
-  }),
-  mobileNumber: Joi.string()
-    .pattern(new RegExp("^[6-9]\\d{9}$"))
-    .required()
-    .messages({
-      "string.empty": "This field cannot be left blank",
-      "string.pattern.base": "Please enter a valid phone number",
-    }),
-  role: Joi.string().required().messages({
-    "string.empty": "This field cannot be left blank",
-  }),
-});
 const FormField = ({ id, onClose }: FormFieldProps) => {
   const navigate = useNavigate();
   const { toggleCount, setToggleCount } = updateUserList();
@@ -110,62 +68,41 @@ const FormField = ({ id, onClose }: FormFieldProps) => {
   }, [formDetails, setValue, reset]);
 
   const onSubmit = async (data: FormValues) => {
-    if (data) {
-      if (id) {
-        await updateUser(id, {
-          name: data.name,
-          email: data.email,
-          employeeId: data.employeeId,
-          mobileNumber: data.mobileNumber,
-          JobRole: data.role,
-        })
-          .then((response) => {
-            console.log("response", response);
-            toast.success("Data updated successfully!", {
-              autoClose: 3000,
-              style: {
-                backgroundColor: "#4caf50",
-                color: "#fff",
-              },
-            });
+    try {
+      const userPayload = {
+        name: data.name,
+        email: data.email,
+        employeeId: data.employeeId,
+        mobileNumber: data.mobileNumber,
+        JobRole: data.role,
+      };
 
-            setTimeout(() => {
-              form.reset();
-              setToggleCount(toggleCount + 1);
-              onClose && onClose();
-            }, 1000);
-          })
-          .catch((error) => {
-            toast(error.message);
-          });
-      } else {
-        await createUser({
-          name: data.name,
-          email: data.email,
-          employeeId: data.employeeId,
-          mobileNumber: data.mobileNumber,
-          JobRole: data.role,
-        })
-          .then((response) => {
-            console.log("response", response);
-            toast.success("Data created successfully!", {
-              autoClose: 3000,
-              style: {
-                backgroundColor: "#4caf50",
-                color: "#fff",
-              },
-            });
-            form.reset();
-            setTimeout(() => {
-              navigate("/home");
-            }, 1000);
-          })
-          .catch((error) => {
-            toast(error.message);
-          });
+      const response = id
+        ? await updateUser(id, userPayload)
+        : await createUser(userPayload);
+
+      if (response) {
+        toast.success(`Data ${id ? "updated" : "created"} successfully!`, {
+          autoClose: 3000,
+          style: { backgroundColor: "#4caf50", color: "#fff" },
+        });
+
+        reset();
+
+        if (id) {
+          setTimeout(() => {
+            setToggleCount(toggleCount + 1);
+            onClose?.();
+          }, 1000);
+        } else {
+          setTimeout(() => navigate("/home"), 1000);
+        }
       }
+    } catch (error: any) {
+      toast.error(error.message);
     }
   };
+
   return (
     <form
       {...form}
@@ -327,7 +264,6 @@ const FormField = ({ id, onClose }: FormFieldProps) => {
           type="submit"
           className="w-32 mt-2 m-auto"
         />
-        <ToastContainer />
       </div>
     </form>
   );
