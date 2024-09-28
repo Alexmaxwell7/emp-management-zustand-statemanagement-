@@ -101,6 +101,11 @@
       "id": "a6d2",
       "email": "exampleuser@gmail.com",
       "password": "welcome"
+    },
+    {
+      "id": "68d0",
+      "email": "exampleuser@gmail.com",
+      "password": "welcome"
     }
   ],
   "userDetails": [
@@ -110,7 +115,15 @@
       "email": "alexmaxwell7@outlook.com",
       "employeeId": "3333",
       "mobileNumber": "7030555988",
-      "JobRole": "manager"
+      "JobRole": "admin"
+    },
+    {
+      "id": "c4a4",
+      "name": "Vignesh d s",
+      "email": "abcde@gmail.com",
+      "employeeId": "6666",
+      "mobileNumber": "7030555998",
+      "JobRole": "admin"
     }
   ]
 }
