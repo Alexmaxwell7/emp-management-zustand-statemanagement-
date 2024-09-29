@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/emp-management-zustand-statemanagement-/static/css/main.640a0d08.css",
+    "main.js": "/emp-management-zustand-statemanagement-/static/js/main.f4100ab1.js",
+    "index.html": "/emp-management-zustand-statemanagement-/index.html",
+    "main.640a0d08.css.map": "/emp-management-zustand-statemanagement-/static/css/main.640a0d08.css.map",
+    "main.f4100ab1.js.map": "/emp-management-zustand-statemanagement-/static/js/main.f4100ab1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.640a0d08.css",
+    "static/js/main.f4100ab1.js"
+  ]
+}
